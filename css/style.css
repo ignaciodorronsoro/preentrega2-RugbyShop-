@@ -23,14 +23,6 @@ body {
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
-/* inicio de grid */
-
-.padreGridArea {
-
-}
-  
-
-/* fin de grid */
 
 .listStyleNone {
   list-style-type: none;
@@ -147,72 +139,6 @@ img {
   }
 }
 
-/*  chat gpt code css para menu hamburguesa */
-
-.menu-toggle {
-  display: none;
-  color: white;
-  justify-content: end;
-}
-
-.menu-icon {
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 30px;
-  height: 25px;
-  cursor: pointer;
-  justify-self: end;
-}
-
-.menu-icon span {
-  width: 100%;
-  height: 3px;
-  background-color: #fff;
-  border-radius: 2px;
-}
-
-/* Media query para dispositivos móviles y tablets */
-@media (max-width: 768px) {
-  .nav-menu {
-      display: none;
-      flex-direction: column;
-      background-color: #fff;
-      position: absolute;
-      top: 60px;
-      left: 20px;
-      width: 200px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  }
-
-  .menu-toggle:checked + .menu-icon + .nav-menu {
-      display: flex;
-      justify-content: start;
-  }
-
-  .nav-menu ul {
-      flex-direction: column;
-      padding: 0;
-  }
-
-  .nav-menu li {
-      list-style: none;
-      padding: 10px 20px;
-      text-align: left;
-  }
-
-  .nav-menu a {
-      text-decoration: none;
-      color: #fff;
-  }
-
-  .menu-icon {
-      display: flex;
-  }
-}
-
-/* fin de la medi query*/
-
 
 .gridImg2{
   display: grid;
@@ -270,7 +196,7 @@ grid-row: 1 / 3;
   border-bottom: 1px solid;
 }
 .font{
-  color: rgb(240, 222, 222);
+  color: rgb(240, 222, 222) !important;
 }
 .h1{
   margin: 0 0 0 0;
@@ -316,6 +242,7 @@ main h2{
   display: flex;
   text-align: center;
 }
+
 .decoration {
   text-decoration: none;
 }
@@ -360,9 +287,14 @@ main h2{
 }
 
 /* foooter */
-
-footer ul {
-    list-style-type: none;
+.copyFooter {
+  display: flex;
+  text-align: end; /* Alinea los elementos al final del contenedor */
+  flex-direction: column; /* Coloca los elementos en forma de columna */
+  font-size: xx-small; /* Puedes ajustar el tamaño de la fuente según prefieras */
+}
+footer img{
+  width: 10%;
 }
 .footer {
   background-color: black;
@@ -370,10 +302,11 @@ footer ul {
   text-align: center;
   padding: 20px;
   border: 0px
+  
 }
 
 .footerMargin{
-  margin: 0;
+  margin: 0 ;
 }
 
 .footerList{
@@ -460,10 +393,85 @@ footer ul {
 
 .backgroundMain {
   background-color: rgb(240, 222, 222);
+  border-bottom: ;
 }
 
+/* pagina indumentaria codigo */
 
+.imgSection img {
+  border: 2px solid black; /* Añade un borde negro a cada imagen */
+  border-radius: 10px; /* Bordes redondeados */
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  object-fit: cover; /* Ajusta la imagen para que llene su contenedor */
+  margin-bottom: 15px; /* Añade espacio debajo de cada imagen */
+}
 
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+/* hostoria y contacto css style */
+/* codigo de css para iframe */
+/* Centra el iframe dentro del contenedor */
+.contIframe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Agrega bordes negros al iframe y lo centra */
+/* Centra el iframe dentro del contenedor */
+.contIframe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px; /* Espaciado alrededor del contenido */
+}
+
+/* Haz que el iframe sea responsivo */
+.contIframe iframe {
+  border: 5px solid black; /* Borde negro de 5px */
+  display: block;
+  width: 100%; /* Ocupa el 100% del ancho disponible */
+  max-width: 600px; /* Ancho máximo en pantallas grandes */
+  height: auto; /* Ajusta la altura automáticamente */
+  aspect-ratio: 16 / 9; /* Mantén una relación de aspecto de 16:9 */
+}
+
+/* Centra el texto y cambia el tamaño de la fuente */
+.contIframe div p {
+  text-align: center;
+  font-size: 0.9rem; /* Tamaño de letra pequeño */
+  margin: 5px 0; /* Espacio entre las líneas de texto */
+}
+
+/* Media query para pantallas grandes (Desktop) */
+@media (min-width: 1024px) {
+  .contIframe iframe {
+      max-width: 800px; /* Aumenta el ancho máximo en pantallas grandes */
+      height: auto; /* Mantén la altura automática */
+  }
+}
+
+/* Media query para pantallas medianas (Tabletas) */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .contIframe iframe {
+      max-width: 90%; /* Ocupa el 90% del contenedor en tabletas */
+      height: auto; /* Ajusta automáticamente la altura */
+  }
+}
+
+/* Media query para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+  .contIframe iframe {
+      max-width: 100%; /* Ocupa el 100% del contenedor en móviles */
+      height: auto; /* Ajusta automáticamente la altura */
+  }
+}
 
 
 
