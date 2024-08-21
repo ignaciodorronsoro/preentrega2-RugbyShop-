@@ -23,6 +23,7 @@ body {
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
+
 .listStyleNone {
   list-style-type: none;
   justify-content: space-around; 
@@ -35,9 +36,14 @@ body {
   color:rgb(240, 222, 222);
   text-decoration: none;
 }
-
 .itemLi:hover {
   color: white;
+}
+
+@media (max-width: 769px) {
+  .colorFontNav {
+    display: none;
+  }
 }
 
 .colorFont{
@@ -56,14 +62,15 @@ body {
   display: flex;
   align-items: start;
   width: 100%;
-  background-color: black;
-}
+  background-color: black
+  ;
 
+}
 .logoImg img{
   width: 150px;
 }
-
 /* main codigos */
+
 .mainImg {
   display: flex;
   justify-content: center;
@@ -82,9 +89,14 @@ img {
   display: grid;
   width: 100vh;
   height: auto;
-  margin: 0 0;
+  margin: o o;
   grid-template-columns:repeat(6, 1fr);
   justify-content: center;
+}
+@media (min-width 769px) and (max-width 1130px) {
+  .gridImg1 {
+    display: ;
+  }
 }
 
 .item1{
@@ -106,6 +118,28 @@ img {
   height: 371px;
 }
 
+/* media query del primer grid */
+
+@media (max-width: 1130px) {
+  .gridImg1 {
+    grid-template-columns: 1fr; /* Una sola columna para dispositivos móviles */
+    width: auto;
+  }
+
+  .item1, .item2, .item3 {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    height: auto; /* Ajusta la altura automáticamente */
+    grid-column: auto; /* Cada elemento ocupa una fila completa */
+  }
+}
+
+@media (min-width 1124px) {
+  .item3 {
+    flex-wrap: wrap;
+  }
+}
+
+
 .gridImg2{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -116,23 +150,43 @@ img {
 }
 
 .gridItem1{
-  grid-column: 1 / 4;
-  grid-row: 1 / 3;
+ grid-column: 1 / 4;
+ grid-row: 1 / 3;
 }
 
 .gridItem2 {
-  grid-column: 4 / 7;
-  grid-row: 1 / 3;
+
+grid-column: 4 / 7;
+grid-row: 1 / 3;
 }
 
+@media (max-width: 1130px) {
+  .gridImg2 {
+    display: block;
+  }
+
+  .gridItem1,
+  .gridItem2 {
+    width: 100%;
+    display: block;
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .divP{
+    display: block;
+    justify-content: start;
+  }
+}
 /* cod bordes de los parrafos de abajo */
+
 .borderImg{
   margin: 0 0 0 0;
 }
 
+/* fin */ 
 .indexImgSpace img {
   flex: 1;
-  margin: 0px; /* Ajusta el valor de margen según la separación deseada entre las imágenes */
+  margin: 0 px; /* Ajusta el valor de margen según la separación deseada entre las imágenes */
 }
 
 .main{
@@ -141,17 +195,21 @@ img {
   border-top: none;
   border-bottom: 1px solid;
 }
-
 .font{
   color: rgb(240, 222, 222) !important;
 }
-
 .h1{
   margin: 0 0 0 0;
   background-color: black;
   width: auto;
   font-size: auto;
   border-top: 1px solid rgb(240, 222, 222);
+}
+@media (max-width 769px) {
+  .divP h1 {
+    border-top: rgb(240, 222, 222);
+    border-bottom: rgb(240, 222, 222);
+  }
 }
 
 .h2 {
@@ -196,9 +254,22 @@ main h2{
   border-bottom: black;
 }
 
+@media (max-width: 1130px) {
+  .soloDesktop {
+      display: none;
+  }
+}
 /* media query y clase para dispositivo mobile y tablet de las opciones PELOTAS y CAMISETAS NACIONALES */
+
 .soloTabletMobile {
   display: none;
+}
+
+/* Mostrar solo en tablets y dispositivos móviles (1024px y menores) */
+@media (max-width: 1130px) {
+  .soloTabletMobile {
+      display: block; /* o flex, si deseas mantener el layout flexible */
+  }
 }
 
 .divPImgOne {
@@ -222,17 +293,16 @@ main h2{
   flex-direction: column; /* Coloca los elementos en forma de columna */
   font-size: xx-small; /* Puedes ajustar el tamaño de la fuente según prefieras */
 }
-
 footer img{
   width: 10%;
 }
-
 .footer {
   background-color: black;
   color: rgb(240, 222, 222);
   text-align: center;
   padding: 20px;
-  border: 0px;
+  border: 0px
+  
 }
 
 .footerMargin{
@@ -245,6 +315,7 @@ footer img{
 }
 
 /* pagina de Botines.html codigo CSS */
+
 .margin {
   margin: 0 0 0 0;
   border:  0 0 0 0;
@@ -265,9 +336,23 @@ footer img{
   text-align: center;
   background-color: rgb(240, 222, 222);
 }
-
 .colorMarginBottom {
   margin-bottom: rgb(240, 222, 222);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gridFotosBotines {
+    grid-template-columns: 1fr 1fr; /* Cambia a dos columnas */
+    width: 100%; /* Ajusta el ancho al 100% */
+  }
+}
+
+/* Media query para pantallas pequeñas (menos de 768px) */
+@media (max-width: 767px) {
+  .gridFotosBotines {
+    grid-template-columns: 1fr; /* Cambia a una sola columna */
+    width: 100%; /* Ajusta el ancho al 100% */
+  }
 }
 
 .bordesRedondos {
@@ -275,7 +360,6 @@ footer img{
   border: 2px solid #979797; /* Un borde para resaltar el `border-radius` */
   background-color: rgb(240, 222, 222);
 }
-
 .hoverFotos {
   color: black;
   display: inline-block; /* Asegura que el enlace se ajuste al tamaño de la imagen */
@@ -295,16 +379,13 @@ footer img{
 .bordesCuadrados{
   border: 2px solid #979797
 }
-
 .hoverFotos2{
   color: black;
 }
-
 .hoverFotos2 img {
   border: 2px solid #979797; /* Define el borde inicial como transparente */
   transition: border-color 0.3s ease, transform 0.3s ease; /* Transición suave */
 }
-
 .hoverFotos2:hover img {
   border-color: rgb(0, 0, 0); /* Cambia el color del borde en hover */
   transform: ; /* Opcional: aumenta ligeramente el tamaño de la imagen */
@@ -316,6 +397,7 @@ footer img{
 }
 
 /* pagina indumentaria codigo */
+
 .imgSection img {
   border: 2px solid black; /* Añade un borde negro a cada imagen */
   border-radius: 10px; /* Bordes redondeados */
@@ -331,6 +413,17 @@ footer img{
 }
 
 /* hostoria y contacto css style */
+/* codigo de css para iframe */
+/* Centra el iframe dentro del contenedor */
+.contIframe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Agrega bordes negros al iframe y lo centra */
+/* Centra el iframe dentro del contenedor */
 .contIframe {
   display: flex;
   flex-direction: column;
@@ -339,6 +432,7 @@ footer img{
   padding: 16px; /* Espaciado alrededor del contenido */
 }
 
+/* Haz que el iframe sea responsivo */
 .contIframe iframe {
   border: 5px solid black; /* Borde negro de 5px */
   display: block;
@@ -348,199 +442,36 @@ footer img{
   aspect-ratio: 16 / 9; /* Mantén una relación de aspecto de 16:9 */
 }
 
+/* Centra el texto y cambia el tamaño de la fuente */
 .contIframe div p {
   text-align: center;
   font-size: 0.9rem; /* Tamaño de letra pequeño */
   margin: 5px 0; /* Espacio entre las líneas de texto */
 }
-/* codigo de pagina de contacto */
-main {
-  background-color: rgb(240, 222, 222);
-}
-.container {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: rgb(240, 222, 222);
-}
-.contact-info, .formulario, .mapa, .social {
-  margin-bottom: 40px;
-  background-color: rgb(240, 222, 222);
-  padding: 20px;
-  border-radius: 10px;
-}
-.contact-info h2, .formulario h2, .mapa h2, .social h2 {
-  margin-bottom: 20px;
-  background-color: black;
-  color: rgb(240, 222, 222);
-  padding: 10px;
-  border-radius: 5px;
-}
-.formulario input, .formulario textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 5px 0 15px;
-  border: 1px solid #ccc;
-  background-color: white;
-}
-.formulario button {
-  padding: 10px 20px;
-  background-color: black;
-  color: rgb(240, 222, 222);
-  border: none;
-  cursor: pointer;
-}
-/* codigo de chat para los mismos estilos en la pagina de historia que de contacto*/
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: rgb(240, 222, 222);
-}
 
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 20px 0;
-}
-
-/* Estilos para el main de historia.html */
-.contact-main {
-  background-color: rgb(240, 222, 222);
-  padding: 20px;
-}
-
-/* Estilos para los encabezados */
-.contact-h2 {
-  background-color: black;
-  color: rgb(240, 222, 222);
-  padding: 10px;
-  margin-bottom: 20px;
-  font-family: Arial, sans-serif;
-}
-
-/* Estilos para la sección de preguntas frecuentes */
-.accordion-button {
-  background-color: black;
-  color: rgb(240, 222, 222);
-}
-
-.accordion-body {
-  background-color: white;
-}
-/* Media Queries */
-@media (max-width: 769px) {
-  .colorFontNav {
-    display: none;
-  }
-
-  .divP h1 {
-    border-top: rgb(240, 222, 222);
-    border-bottom: rgb(240, 222, 222);
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1023px) {
-  .gridFotosBotines {
-    grid-template-columns: 1fr 1fr; /* Cambia a dos columnas */
-    width: 100%; /* Ajusta el ancho al 100% */
-  }
-
-  .contIframe iframe {
-    max-width: 90%; /* Ocupa el 90% del contenedor en tabletas */
-    height: auto; /* Ajusta automáticamente la altura */
-  }
-}
-
-@media (max-width: 767px) {
-  .gridFotosBotines {
-    grid-template-columns: 1fr; /* Cambia a una sola columna */
-    width: 100%; /* Ajusta el ancho al 100% */
-  }
-
-  .contIframe iframe {
-    max-width: 100%; /* Ocupa el 100% del contenedor en móviles */
-    height: auto; /* Ajusta automáticamente la altura */
-  }
-}
-
+/* Media query para pantallas grandes (Desktop) */
 @media (min-width: 1024px) {
   .contIframe iframe {
-    max-width: 800px; /* Aumenta el ancho máximo en pantallas grandes */
-    height: auto; /* Mantén la altura automática */
+      max-width: 800px; /* Aumenta el ancho máximo en pantallas grandes */
+      height: auto; /* Mantén la altura automática */
   }
 }
 
-@media (max-width: 1130px) {
-  .gridImg1 {
-    grid-template-columns: 1fr; /* Una sola columna para dispositivos móviles */
-    width: auto;
-  }
-
-  .item1, .item2, .item3 {
-    width: 100%; /* Ajusta el ancho al 100% del contenedor */
-    height: auto; /* Ajusta la altura automáticamente */
-    grid-column: auto; /* Cada elemento ocupa una fila completa */
-  }
-
-  .gridImg2 {
-    display: block;
-  }
-
-  .gridItem1,
-  .gridItem2 {
-    width: 100%;
-    display: block;
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .divP{
-    display: block;
-    justify-content: start;
-  }
-
-  .soloDesktop {
-    display: none;
-  }
-
-  .soloTabletMobile {
-    display: block; /* o flex, si deseas mantener el layout flexible */
+/* Media query para pantallas medianas (Tabletas) */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .contIframe iframe {
+      max-width: 90%; /* Ocupa el 90% del contenedor en tabletas */
+      height: auto; /* Ajusta automáticamente la altura */
   }
 }
 
-@media (min-width: 1124px) {
-  .item3 {
-    flex-wrap: wrap;
+/* Media query para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+  .contIframe iframe {
+      max-width: 100%; /* Ocupa el 100% del contenedor en móviles */
+      height: auto; /* Ajusta automáticamente la altura */
   }
 }
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .gridFotosBotines {
-    grid-template-columns: 1fr 1fr; /* Cambia a dos columnas */
-    width: 100%; /* Ajusta el ancho al 100% */
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .gridFotosBotines {
-    grid-template-columns: 1fr 1fr; /* Cambia a dos columnas */
-    width: 100%; /* Ajusta el ancho al 100% */
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1130px) {
-  .gridImg1 {
-    display: ;
-  }
-}
-
 
 
 
