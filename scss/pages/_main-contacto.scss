@@ -1,0 +1,39 @@
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(240, 222, 222);
+
+    .contact-info, .formulario, .mapa, .social {
+      margin-bottom: 40px;
+      background-color: rgb(240, 222, 222);
+      padding: 20px;
+      border-radius: 10px;
+
+      h2 {
+        margin-bottom: 20px;
+        background-color: black;
+        color: rgb(240, 222, 222);
+        padding: 10px;
+        border-radius: 5px;
+      }
+    }
+
+    .formulario {
+      input, textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px;
+        border: 1px solid #ccc;
+        background-color: white;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: black;
+        color: rgb(240, 222, 222);
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }

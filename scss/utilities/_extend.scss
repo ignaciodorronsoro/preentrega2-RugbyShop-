@@ -1,0 +1,16 @@
+// Extensiones de estilos comunes
+%flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+%border-box {
+  border: 2px solid $gray-border;
+  border-radius: $border-radius;
+}
+
+%flex-header{
+  display: flex;
+  align-items: start;
+}

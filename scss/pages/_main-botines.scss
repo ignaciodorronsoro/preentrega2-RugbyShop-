@@ -1,0 +1,26 @@
+// Clase .margin
+.margin {
+    margin: 0;
+    border: 0;
+}
+
+// Clase .gridFotosBotines
+.gridFotosBotines {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // Optimización de columnas
+    gap: 32px 16px;
+    margin: 16px 0; // Combina margin-top y margin-bottom
+    justify-content: center;
+    text-align: center;
+    background-color: $white-color;
+
+    .bordesRedondos {
+        border-radius: 20px; /* El radio de la esquina redondeada */
+        border: 2px solid #979797; /* Un borde para resaltar el `border-radius` */
+        background-color: rgb(240, 222, 222);
+    }
+}
+// Clase .font
+.font {
+    color: $white-color !important;
+}

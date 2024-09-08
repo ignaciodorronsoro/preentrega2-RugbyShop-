@@ -1,0 +1,76 @@
+// Media queries para el archivo index.html
+@media (max-width: 1130px) {
+  .gridImg1 {
+    display: grid;
+    grid-template-columns: 1fr; // Una sola columna para dispositivos móviles
+    width: auto;
+  }
+
+  .item1,
+  .item2,
+  .item3 {
+    width: 100%; // Ajusta el ancho al 100% del contenedor
+    height: auto; // Ajusta la altura automáticamente
+    grid-column: auto; // Cada elemento ocupa una fila completa
+  }
+
+  .gridImg2 {
+    display: block;
+  }
+
+  .gridItem1,
+  .gridItem2 {
+    width: 100%;
+    display: block;
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .divP {
+    display: block;
+    justify-content: start;
+
+    h1 {
+      border-top: rgb(240, 222, 222);
+      border-bottom: rgb(240, 222, 222);
+    }
+  }
+
+  .soloDesktop {
+    display: none;
+  }
+
+  .soloTabletMobile {
+    display: block; // o flex, si deseas mantener el layout flexible
+  }
+}
+
+@media (min-width: 1124px) {
+  .item3 {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 769px) {
+  .divP {
+    h1 {
+      border-top: rgb(240, 222, 222);
+      border-bottom: rgb(240, 222, 222);
+    }
+  }
+}
+
+// Media queries para el archivo botines.html
+@media (min-width: 768px) and (max-width: 1023px) {
+    .gridFotosBotines {
+      grid-template-columns: 1fr 1fr; /* Cambia a dos columnas */
+      width: 100%; /* Ajusta el ancho al 100% */
+    }
+  }
+  /* Media query para pantallas pequeñas (menos de 768px) */
+@media (max-width: 767px) {
+    .gridFotosBotines {
+      grid-template-columns: 1fr; /* Cambia a una sola columna */
+      width: 100%; /* Ajusta el ancho al 100% */
+    }
+}

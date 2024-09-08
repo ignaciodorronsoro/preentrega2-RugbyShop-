@@ -1,0 +1,14 @@
+// Mixins para reutilizar código
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin grid-template($columns, $rows) {
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+}
+
+  

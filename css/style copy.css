@@ -1,62 +1,4 @@
 /* header */
-.headerPosition {
- 
-}
-
-.nav {
-  display: flex;
-  color: black;
-  list-style-type:  none;
-  text-align: center;
-  justify-content: space-around;
-}
-
-.nav-lista{
-  justify-content: space-between;
-  text-align: center;
-}
-
-body {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-}
-
-
-.listStyleNone {
-  list-style-type: none;
-  justify-content: space-around; 
-  display: flex;
-  align-items: center;
-  color: white;
-}
-
-.itemLi {
-  color:rgb(240, 222, 222);
-  text-decoration: none;
-}
-.itemLi:hover {
-  color: white;
-}
-
-@media (max-width: 769px) {
-  .colorFontNav {
-    display: none;
-  }
-}
-
-.colorFont{
-  background-color: black;
-  border-top: 4px solid black;
-  border-bottom: 4px solid black;
-  color: white;
-}
-
-.header-text{
-  margin: 0;
-  text-align: right;
-}
 
 .logoImg{
   display: flex;
@@ -224,14 +166,6 @@ main h2{
   border-bottom: 1px solid;
 }
 
-.opcionesFotos {
- 
-}
-
-.opcionesFotosP {
-  justify-content: space-between;
-}
-
 .div {
   display: flex;
   justify-content: space-around;
@@ -272,20 +206,6 @@ main h2{
   }
 }
 
-.divPImgOne {
-  width: 50%;
-  display: flex;
-  justify-content: start;
-  text-align: center;
-}
-
-.divPImgDos {
-  width: 50%;
-  display: flex;
-  justify-content: end;
-  text-align: center;
-}
-
 /* foooter */
 .copyFooter {
   display: flex;
@@ -305,25 +225,11 @@ footer img{
   
 }
 
-.footerMargin{
-  margin: 0 ;
-}
-
-.footerList{
-  display: flex;
-  justify-content: end;
-}
-
 /* pagina de Botines.html codigo CSS */
 
 .margin {
   margin: 0 0 0 0;
   border:  0 0 0 0;
-}
-
-.flex {
-  display: flex;
-  justify-content: center;
 }
 
 .gridFotosBotines {
@@ -422,56 +328,6 @@ footer img{
   justify-content: center;
 }
 
-/* Agrega bordes negros al iframe y lo centra */
-/* Centra el iframe dentro del contenedor */
-.contIframe {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 16px; /* Espaciado alrededor del contenido */
-}
-
-/* Haz que el iframe sea responsivo */
-.contIframe iframe {
-  border: 5px solid black; /* Borde negro de 5px */
-  display: block;
-  width: 100%; /* Ocupa el 100% del ancho disponible */
-  max-width: 600px; /* Ancho máximo en pantallas grandes */
-  height: auto; /* Ajusta la altura automáticamente */
-  aspect-ratio: 16 / 9; /* Mantén una relación de aspecto de 16:9 */
-}
-
-/* Centra el texto y cambia el tamaño de la fuente */
-.contIframe div p {
-  text-align: center;
-  font-size: 0.9rem; /* Tamaño de letra pequeño */
-  margin: 5px 0; /* Espacio entre las líneas de texto */
-}
-
-/* Media query para pantallas grandes (Desktop) */
-@media (min-width: 1024px) {
-  .contIframe iframe {
-      max-width: 800px; /* Aumenta el ancho máximo en pantallas grandes */
-      height: auto; /* Mantén la altura automática */
-  }
-}
-
-/* Media query para pantallas medianas (Tabletas) */
-@media (min-width: 769px) and (max-width: 1023px) {
-  .contIframe iframe {
-      max-width: 90%; /* Ocupa el 90% del contenedor en tabletas */
-      height: auto; /* Ajusta automáticamente la altura */
-  }
-}
-
-/* Media query para pantallas pequeñas (Móviles) */
-@media (max-width: 768px) {
-  .contIframe iframe {
-      max-width: 100%; /* Ocupa el 100% del contenedor en móviles */
-      height: auto; /* Ajusta automáticamente la altura */
-  }
-}
 
 
 

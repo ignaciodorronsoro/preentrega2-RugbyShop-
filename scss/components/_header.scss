@@ -1,55 +1,12 @@
-// Archivo: _header.scss
+// Header
+.logoImg {
+  @extend %flex-header;
+  width: 100%;
+  background-color: $black-color;
 
-header {
-    .logoImg {
-      display: flex;
-      align-items: start;
-      width: 100%;
-      background-color: black;
-  
-      img {
-        width: 150px;
-      }
-    }
-  
-    nav.navbar {
-      background-color: black;
-  
-      .container-fluid {
-        a.navbar-brand {
-          color: rgb(240, 222, 222) !important; // Color para el brand si es necesario
-        }
-  
-        .navbar-toggler {
-          .navbar-toggler-icon {
-            // Estilos para el ícono del toggle (si es necesario)
-          }
-        }
-  
-        .collapse.navbar-collapse {
-          #navbarNav {
-            ul.navbar-nav {
-              display: flex;
-              flex-direction: column;
-              list-style-type: none;
-              text-align: center;
-              justify-content: space-around;
-  
-              li.nav-item {
-                a.nav-link {
-                  color: rgb(240, 222, 222) !important; // Color de las letras del navbar
-  
-                  &:hover,
-                  &.active {
-                    color: white !important; // Cambia el color cuando esté activo o en hover
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+  img {
+    width: 150px;
   }
+}
   
   

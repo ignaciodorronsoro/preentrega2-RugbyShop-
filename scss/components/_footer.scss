@@ -1,0 +1,19 @@
+// Footer
+.copyFooter {
+    display: flex;
+    text-align: end;
+    flex-direction: column;
+    font-size: xx-small;
+  }
+  
+  footer img {
+    width: 10%;
+  }
+  
+  .footer {
+    background-color: $black-color;
+    color: $white-color;
+    text-align: center;
+    padding: 20px;
+    border: 0;
+  }

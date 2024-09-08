@@ -1,0 +1,27 @@
+// _global.scss
+// Estilos globales
+img {
+  width: $img-width;
+}
+
+.decoration {
+  text-decoration: none;
+}
+// Estilos globales para todos los <main>
+main {
+  background-color: $white-color; // Fondo negro
+  color: $black-color; // Texto blanco
+}
+// Estilo para encabezados
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  background-color: $black-color !important; // Fondo negro
+  color: $white-color !important; // Texto blanco
+}
+.nav-Link {
+  color: $white-color !important; 
+}
